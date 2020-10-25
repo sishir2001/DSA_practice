@@ -19,7 +19,8 @@ void check_palindrome(char *s){
 }
 
 void main(void){
-    char s[] = "madam",a[] = "sisihri";
+    char s[] = "madam",a[] = "sisihri",d[] = " madam madam ";
     check_palindrome(s);
     check_palindrome(a);
+    check_palindrome(d);
 }
