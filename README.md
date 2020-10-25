@@ -1,2 +1,2 @@
-# DSA_Arrays.
-just practice codes of DSA_arrays.
+# DSA_Practice.
+just practice codes of DSA(data structures and algorithms).
