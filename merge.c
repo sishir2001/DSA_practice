@@ -14,17 +14,19 @@ bool isSort(int *q,int n){
 void merge(int *a,int m,int *b,int n,int *c){
     int i,j,k;
     i = j = k =0;
-    while(i<m||j<n){
-        if(j>=n || a[i]<b[j]){
+    while(i<m && j<n){
+        if(a[i]<=b[j]){
+            if(a[i] == b[j])
+                j++;
             c[k++] = a[i++];
         }
-        else if(i>=m || b[j]<=a[i]){
-            if(i<m && a[i] == b[j])
-            i++;
-            c[k++] = b[j++];
-        }
-            
+        else if(a[i]>b[j])
+            c[k++] = b[j++];          
     }
+    while(i<m)
+        c[k++] = a[i++];
+    while(j<n)
+        c[k++] = b[j++];
     for(i=0;i<k;i++)
         printf("%d ",c[i]);
 }
